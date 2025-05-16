@@ -9,72 +9,84 @@ body {
     min-height: 100vh;
 }
 
-
 main {
     flex: 1;
 }
 
+       header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-top: 15px;
+        }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    margin-top: 15px;
-}
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
+        header nav a {
+            font-weight: 630;
+            color: #000000;
+            text-decoration: none;
+            margin: 0 40px;
+        }
 
-header .logo {
+        header nav a {
+            position: relative;
+            color: #000000;
+            text-decoration: none;
+            margin: 0 40px;
+            display: inline-block;
+        }
+
+        header nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: #373434;
+            transition: width 0.3s ease;
+        }
+
+        header nav a:hover::after {
+            width: 100%;
+        }
+
+        nav .profile-button {
+            background-color: #DF7126;
+            color: #000000;
+            padding: 10px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav .profile-button:hover {
+            background-color: #FFC107;
+        }
+        .logo-link {
+    text-decoration: none;
+    color: #fff;
     font-size: 24px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: color 0.3s ease;
 }
 
-
-header nav a {
-    position: relative;
-    font-weight: 630;
-    color: #000000;
+.logo-link:hover {
+    color: #202D40;
     text-decoration: none;
-    margin: 0 40px;
-    display: inline-block;
 }
-
-
-header nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background-color: #373434;
-    transition: width 0.3s ease;
-}
-
-
-header nav a:hover::after {
-    width: 100%;
-}
-
-
-nav .login-button {
-    background-color: #DF7126;
-    color: #000000;
-    padding: 10px 30px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-
-nav .login-button:hover {
-    background-color: #FFC107;
-}
-
 
 .search-bar-container {
     display: flex;
@@ -82,7 +94,6 @@ nav .login-button:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
 
 .search-bar {
     display: flex;
@@ -98,7 +109,6 @@ nav .login-button:hover {
     margin-bottom: 15px;
 }
 
-
 .search-bar input {
     flex: 1;
     padding: 10px;
@@ -108,12 +118,10 @@ nav .login-button:hover {
     outline: none;
 }
 
-
 .search-bar input::placeholder {
     font-weight: bold;
     color: #999;
 }
-
 
 .search-bar button {
     padding: 10px 20px;
@@ -126,11 +134,9 @@ nav .login-button:hover {
     transition: background-color 0.3s ease;
 }
 
-
 .search-bar button:hover {
     background-color: #e65100;
 }
-
 
 .separator {
     width: 1px;
@@ -138,13 +144,11 @@ nav .login-button:hover {
     background-color: #ccc;
 }
 
-
 .search-button-image {
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
-
 
 .dorm-list {
     display: grid;
@@ -154,7 +158,6 @@ nav .login-button:hover {
     margin: 0 3px;
     box-sizing: border-box;
 }
-
 
 .dorm-card {
     background-color: white;
@@ -167,19 +170,16 @@ nav .login-button:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .dorm-card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .dorm-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
-
 
 .dorm-card .content {
     padding: 20px;
@@ -188,20 +188,17 @@ nav .login-button:hover {
     gap: 15px;
 }
 
-
 .dorm-card .content h3 {
     margin: 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-
 .dorm-card .content p {
     margin: 0;
     font-size: 16px;
     color: #777;
 }
-
 
 .dorm-card .content .rating {
     display: flex;
@@ -210,7 +207,6 @@ nav .login-button:hover {
     font-size: 16px;
     color: #f57c00;
 }
-
 
 .view-dorm-button,
 .dorm-card .content button {
@@ -226,13 +222,11 @@ nav .login-button:hover {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
 .view-dorm-button:hover,
 .dorm-card .content button:hover {
     background-color: #b54d1f;
     transform: scale(1.05);
 }
-
 
 .pagination {
     display: flex;
@@ -241,7 +235,6 @@ nav .login-button:hover {
     gap: 20px;
     padding: 20px;
 }
-
 
 .pagination a {
     text-decoration: none;
@@ -252,13 +245,11 @@ nav .login-button:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 .pagination a:hover {
     background-color: #FFC107;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 footer {
     background-color: #f57c00;
@@ -268,18 +259,15 @@ footer {
     margin-top: 20px;
 }
 
-
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
 }
 
-
 footer a:hover {
     text-decoration: underline;
 }
-
 
 .logo-link {
     text-decoration: none;
@@ -292,8 +280,6 @@ footer a:hover {
     transition: color 0.3s ease;
 }
 
-
 .logo-link:hover {
     color: black;
 }
-
